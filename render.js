@@ -1,6 +1,6 @@
 var express=require('express');
 const fs=require('fs');//file system
-const port=process.env.port || 3000;
+const port=process.env.PORT || 3000;
 var hbs=require('hbs');//handlebars
 var app=express();
 app.use(express.static(__dirname+'/'));//express.static work as a middleware here takes html path
