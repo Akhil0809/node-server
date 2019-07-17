@@ -1,5 +1,6 @@
 var express=require('express');
 const fs=require('fs');//file system
+const port=process.env.port || 3000;
 var hbs=require('hbs');//handlebars
 var app=express();
 app.use(express.static(__dirname+'/'));//express.static work as a middleware here takes html path
@@ -47,5 +48,5 @@ app.get('/help',(req,res)=>{
     res.render('help.hbs');
 });
 
-app.listen(3000);
-console.log("app is listening on port:3000");
+app.listen(port);
+console.log(`app is listening on port:${port}`);
